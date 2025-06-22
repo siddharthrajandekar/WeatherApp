@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: rgba(60, 172, 232, 0.5);
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+}
+
+.data-container {
+    max-width: 600px;
+    padding: 20px;
+    border: 4px solid black;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px grey;
+}
+
+
+.header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 5px;
+}
+
+.search-area {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 30px;
+}
+
+.search-area input[type="text"] {
+    width: 300px;
+    padding: 3px;
+    border: 1px groove rgb(255, 17, 0);
+    border-radius: 10px;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.search-area button {
+    padding: 2px;
+    background-color: bisque;
+    border: 1px solid grey;
+    width: 100px;
+    margin: 5px;
+    font-weight: bold;
+}
+
+.search-area button:hover {
+    cursor: pointer;
+    background-color: rgb(215, 109, 38);
+}
+
+.weather-display {
+    background-color: white;
+    border: solid grey 2px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px grey;
+    padding: 20px;
+}
+
+
+#city-country {
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: center;
+    word-spacing: 10px;
+    margin: 30px;
+}
+
+#temperature {
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+}
+
+#weather-icon {
+    width:40px;
+    height:40px;
+    margin: 5px;
+    vertical-align: middle;
+}
+
+.weather-data {
+    text-align: left;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+.sub-weather-data {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+@media (max-width: 600px){
+    .search-area {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-area input[type="text"],
+    .search-area button{
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    .weather-display {
+        padding: 15px;
+        margin: 10px 0;
+        border-left: 4px solid rgba(60, 172, 232, 0.5);
+    }
+
+    #city-country {
+        font-size: x-large;
+        word-spacing: 5px;
+        margin: 15px 0;
+    }
+
+    #temperature {
+        font-size: x-large;
+    }
+
+    #weather-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .sub-weather-data {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}

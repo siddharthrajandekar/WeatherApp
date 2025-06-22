@@ -1,0 +1,191 @@
+/* Reset defaults */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Full-page center alignment */
+body {
+    background: linear-gradient(135deg, #89f7fe, #66a6ff); /* Nice sky-like gradient */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Card layout container */
+.data-container {
+    max-width: 600px;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(6px); /* Glass effect */
+    transition: transform 0.3s;
+}
+
+/* Slight zoom on hover */
+.data-container:hover {
+    transform: scale(1.01);
+}
+
+/* Header styling */
+.header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Optional title h1 inside header */
+.header h1 {
+    font-size: 36px;
+    color: #222;
+}
+
+/* Input and buttons area */
+.search-area {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+/* Label styling */
+.search-area label {
+    font-weight: bold;
+    margin: auto 0;
+}
+
+/* Input field */
+.search-area input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #66a6ff;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+.search-area input[type="text"]:focus {
+    border-color: #005bea;
+    outline: none;
+}
+
+/* Buttons */
+.search-area button {
+    padding: 10px;
+    background: linear-gradient(145deg, #ffecd2, #fcb69f); /* warm gradient */
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    font-weight: bold;
+    color: #333;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect for buttons */
+.search-area button:hover {
+    background: linear-gradient(145deg, #fcb69f, #ffecd2);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+/* Weather data display section */
+.weather-display {
+    background-color: #fff;
+    border: solid #ccc 1px;
+    border-radius: 12px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Loading text */
+#loading-message {
+    display: none;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+/* City and country text */
+#city-country {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Main temperature display */
+#temperature {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: #005bea;
+}
+
+/* Weather icon */
+.weather-data img {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+}
+
+/* Additional info styling */
+.weather-data {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.sub-weather-data {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+/* Fade-in animation keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 600px) {
+    .search-area {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-area input[type="text"],
+    .search-area button {
+        width: 100%;
+    }
+
+    .sub-weather-data {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #temperature {
+        font-size: 30px;
+    }
+
+    #city-country {
+        font-size: 22px;
+    }
+
+    .weather-data img {
+        width: 40px;
+        height: 40px;
+    }
+}

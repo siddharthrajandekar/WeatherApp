@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title> Weather App </title>
+
+        <!-- Link to external CSS file -->
+        <link rel="stylesheet" href="style.css">        
+        <meta charset="UTF-8">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="description" content="Weather Data APP">
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    </head>
+
+    <body>
+        <div class="data-container">
+            <!-- App Title -->
+            <header class="header">
+                <h1>🌤️ Weather Predictor</h1>
+            </header>
+
+            <!-- Search area for city or location -->
+            <section class="search-area">
+                <label for="city-name">City Name: </label>
+                <input type="text" id="city-name" name="city-name">
+                <button id="search-btn">Search</button>
+                <button id="location-btn">Location</button>
+            </section>
+
+            <!-- Section to display weather data -->
+            <section class="weather-display">
+                <div id="loading-message" style="display: none; text-align: center; font-weight: bold;">
+                    Loading weather data...
+                </div>
+
+                <!-- City and Country Info -->
+                <div id="city-country">
+                    City name
+                    Country Name
+                </div>
+
+                <!-- Temperature and condition -->
+                <div class="weather-data">
+                    <p id="temperature"> Temperature </p>
+                    <p> Weather Condition
+                        <img id="weather-icon" src="https://picsum.photos/100" alt="Weather Icon">
+                    </p>
+                </div>
+                
+                <!-- Additional weather info -->
+                <div class="sub-weather-data">
+                    <p> Humidity </p>
+                    <p> Wind Speed </p>
+                    <p> Pressure </p>
+                </div>
+            </section>
+        </div>
+
+        <!-- JavaScript -->
+        <script src="script.js"></script>
+    </body>
+</html>
