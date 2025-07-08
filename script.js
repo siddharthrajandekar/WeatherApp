@@ -1,5 +1,5 @@
 // API keys and URLs
-const API_Key = "47f670fcb2cfb9241436a27d001c46d5"
+const API_Key = "API_Key" //Add your API key Here.
 const API_URL = "https://api.openweathermap.org/data/2.5/weather?";
 const geo_API_URL = "http://api.openweathermap.org/geo/1.0/direct?";
 
